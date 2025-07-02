@@ -11,15 +11,19 @@ const navItems = [
 ---
 
 <nav class="flex flex-wrap items-center pt-6 pb-16 sm:pt-12 sm:pb-24">
-  <!-- Logo stays on the left -->
-  <a href="/">
-    <Logo />
+  <!-- Logo + Text container -->
+  <a href="/" class="flex items-center gap-2">
+    <Logo /> <!-- Your SVG or image component -->
+    <div class="text-lg sm:text-xl font-semibold leading-tight">
+      <span class="text-white font-bold">World Players</span>
+      <span class="text-gray-300 font-normal">Club</span>
+    </div>
   </a>
 
-  <!-- Add space between logo and nav here -->
+  <!-- Nav links aligned to right -->
   {
     !!navItems?.length && (
-      <ul class="flex flex-wrap gap-x-4 gap-y-1 ml-auto"> <!-- ← this adds space -->
+      <ul class="flex flex-wrap gap-x-4 gap-y-1 ml-auto">
         {navItems.map((item) => (
           <li>
             <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
@@ -31,4 +35,5 @@ const navItems = [
     )
   }
 </nav>
+
 
