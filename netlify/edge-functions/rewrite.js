@@ -1,8 +1,3 @@
-export default async (request, context) => {
-    const path = context.geo?.country?.code === 'AU' ? '/edge/australia' : '/edge/not-australia';
-    return Response.redirect(new URL(path, request.url));
-};
-
-export const config = {
-    path: '/edge'
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c8d3b207f63126c4f9192d0511fd16d57d66d053d7b25ace0864ea06435fe19
+size 258
