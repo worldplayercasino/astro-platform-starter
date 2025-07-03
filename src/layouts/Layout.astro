@@ -40,9 +40,12 @@ const { title } = Astro.props;
   </div>
 
   <!-- ✅ Second BG image auto-sized to screen width -->
-  <div
-    class="w-full bg-no-repeat bg-top bg-contain bg-center"
-    style="background-image: url('/images/second-bg.png'); height: auto; min-height: 400px;"
+ <div
+    class="w-full bg-no-repeat bg-top bg-cover bg-center"
+    style="
+      background-image: url('/images/second-bg.png');
+      height: 800px; /* Match native height or use vh like 90vh */
+    "
   >
     
   </div>
