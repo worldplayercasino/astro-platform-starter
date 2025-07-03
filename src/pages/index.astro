@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Markdown from '../components/Markdown.astro';
 import ContextAlert from '../components/ContextAlert.astro';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
+
 const explainer = `The Royal Casino will bring you the real experience.`;
 ---
 
@@ -41,4 +44,56 @@ const explainer = `The Royal Casino will bring you the real experience.`;
   </h1>
 </section>
 
+<section class="w-full px-4 py-12 sm:px-12 bg-transparent">
+  <div class="max-w-6xl mx-auto">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <img src="/images/slider1.png" alt="Slide 1" class="w-full h-auto rounded" />
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <img src="/images/slider2.png" alt="Slide 2" class="w-full h-auto rounded" />
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <img src="/images/slider3.png" alt="Slide 3" class="w-full h-auto rounded" />
+        </div>
+
+        <!-- Add more slides as needed -->
+
+      </div>
+
+      <!-- Arrows -->
+      <div class="swiper-button-next text-yellow-400"></div>
+      <div class="swiper-button-prev text-yellow-400"></div>
+    </div>
+  </div>
+</section>
+
+<script type="module">
+  import Swiper, { Navigation } from 'swiper';
+
+  const swiper = new Swiper('.mySwiper', {
+    modules: [Navigation],
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
 </Layout>
