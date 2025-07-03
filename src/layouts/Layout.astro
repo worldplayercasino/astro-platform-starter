@@ -21,31 +21,28 @@ const { title } = Astro.props;
 
   <body class="antialiased text-white bg-black">
     
-    <!-- ✅ Section 1: Fullscreen BG Image -->
-    <section
-      class="relative w-full h-screen bg-cover bg-top bg-no-repeat bg-center"
-      style="background-image: url('/images/header-bg.png');"
-    >
-      <div class="flex flex-col w-full h-full px-6 sm:px-12">
-        <Header />
-        <main class="grow">
-          <slot />
-        </main>
-        <Footer />
-      </div>
-    </section>
+   <!-- ✅ First background image section -->
+<section
+  class="w-full bg-no-repeat bg-top bg-cover bg-center"
+  style="background-image: url('/images/header-bg.png'); height: 800px;"
+>
+  <div class="w-full h-full px-6 sm:px-12 flex flex-col">
+    <Header />
+    <main class="grow">
+      <slot />
+    </main>
+    <Footer />
+  </div>
+</section>
 
-    <!-- ✅ Section 2: Full-width Second Image (no overlap, no gap) -->
-    <section
-      class="w-full bg-cover bg-top bg-no-repeat bg-center"
-      style="
-        background-image: url('/images/second-bg.png');
-        width: 100%;
-        aspect-ratio: 1440 / 800;
-      "
-    >
-      <!-- Optional content over second image -->
-    </section>
+<!-- ✅ Second background image section (begins exactly after 800px height) -->
+<section
+  class="w-full bg-no-repeat bg-top bg-cover bg-center"
+  style="background-image: url('/images/second-bg.png'); height: 800px;"
+>
+  <!-- Optional content -->
+</section>
+
 
   </body>
 </html>
