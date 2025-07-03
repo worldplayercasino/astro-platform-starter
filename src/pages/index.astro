@@ -2,47 +2,23 @@
 import Layout from '../layouts/Layout.astro';
 import ContextAlert from '../components/ContextAlert.astro';
 import Markdown from '../components/Markdown.astro';
-import Logo from '../components/Logo.astro';
 
-const explainer = `The Royal Casino will bring you the real experience.`;
+const explainer = `
+The Royal Casino will bring you the real experience.
+`;
 ---
 
-<!-- Full layout container -->
 <Layout title="World Players Club">
+  <ContextAlert class="mb-8" />
 
-  <!-- 🔥 HERO SECTION: full top with background image -->
-  <section
-    class="relative h-[33vh] bg-cover bg-center bg-no-repeat"
-    style="background-image: url('/images/header-bg.png');"
-  >
-    <!-- Optional dark overlay -->
-    <div class="absolute inset-0 bg-black/40"></div>
+  <!-- Welcome Section (no background image) -->
+  <h3 class="mb-2 text-left text-xl">Welcome!</h3>
+  <h1 class="text-4xl font-bold text-yellow-400 mb-4 text-left">WPC CASINO</h1>
 
-    <!-- Content inside image -->
-    <div class="relative z-10 flex flex-col justify-center h-full px-6 sm:px-12 text-white">
-      
-      <!-- 🟨 Logo + site title -->
-      <a href="/" class="flex items-center gap-6 mb-4">
-        <Logo />
-        <div class="text-lg sm:text-xl font-semibold leading-tight">
-          <span class="text-white font-bold">World Players</span>
-          <span class="text-gray-300 font-normal">Club</span>
-        </div>
-      </a>
-
-      <!-- 🟨 Welcome & title text -->
-      <h3 class="text-xl mb-1">Welcome!</h3>
-      <h1 class="text-4xl font-bold text-yellow-400 mb-4">WPC CASINO</h1>
-
-      <!-- 🟨 Play Now Button (as image) -->
-      <a href="/Casino">
-        <img src="/images/playnow-bg.png" alt="Play Now" class="w-[148px] h-[56px]" />
-      </a>
-    </div>
-  </section>
-
-  <!-- Optionally, your page content continues here -->
-  <ContextAlert class="mt-12" />
   <Markdown content={explainer} class="mb-10 text-lg text-left" />
 
+  <!-- Play Now button as image -->
+  <a href="/Casino">
+    <img src="/images/playnow-bg.png" alt="Play Now" class="w-[148px] h-[56px]" />
+  </a>
 </Layout>
