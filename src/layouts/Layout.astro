@@ -24,19 +24,32 @@ const { title } = Astro.props;
   </head>
 
   <body class="antialiased text-white bg-black">
-    <!-- ✅ Full screen responsive BG image -->
-    <div
-      class="min-h-screen bg-no-repeat bg-top bg-cover bg-center"
-      style="background-image: url('/images/header-bg.png');"
-    >
-      <!-- ✅ Content wrapper -->
-      <div class="flex flex-col min-h-screen w-full px-6 sm:px-12">
-        <Header />
-        <main class="grow">
-          <slot />
-        </main>
-        <Footer />
-      </div>
+
+  <!-- ✅ First BG image full screen -->
+  <div
+    class="min-h-screen bg-no-repeat bg-top bg-cover bg-center"
+    style="background-image: url('/images/header-bg.png');"
+  >
+    <div class="flex flex-col min-h-screen w-full px-6 sm:px-12">
+      <Header />
+      <main class="grow">
+        <slot />
+      </main>
+      <Footer />
     </div>
-  </body>
+  </div>
+
+  <!-- ✅ Second BG image auto-sized to screen width -->
+  <div
+    class="w-full bg-no-repeat bg-top bg-contain bg-center"
+    style="background-image: url('/images/second-bg.png'); height: auto; min-height: 400px;"
+  >
+    <!-- Optional content inside -->
+    <div class="w-full px-6 py-12 max-w-6xl mx-auto">
+      <!-- You can add more content here -->
+    </div>
+  </div>
+
+</body>
+
 </html>
