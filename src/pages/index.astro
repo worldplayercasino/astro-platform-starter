@@ -1,23 +1,59 @@
-<Layout title="World Players Club">
+---
+import Layout from '../layouts/Layout.astro';
+import ContextAlert from '../components/ContextAlert.astro';
+import Markdown from '../components/Markdown.astro';
+import Logo from '../components/Logo.astro';
 
-  <!-- 🔲 First Image Section (1440x800) -->
+const explainer = `
+The Royal Casino will bring you the real experience.
+`;
+---
+
+<Layout title="World Players Club">
+  <!-- 🔲 SECTION 1: First Background Image -->
   <section class="w-full bg-black">
     <div
       class="bg-no-repeat bg-top bg-center"
-      style="background-image: url('/images/header-bg.jpg'); background-size: 1440px auto;"
+      style="background-image: url('/images/header-bg.jpg'); background-size: 1440px auto; height: 800px;"
     >
-      <!-- Header and top content here -->
-      <!-- ... your logo, nav, welcome text, and play button ... -->
+      <!-- 🔧 Header: Logo Left, Nav Right -->
+      <div class="flex justify-between items-center px-6 pt-6 sm:px-12">
+        <!-- Logo Left -->
+        <a href="/" class="flex items-center gap-4">
+          <Logo />
+          <div class="text-lg sm:text-xl font-semibold leading-tight">
+            <span class="text-white font-bold">World Players</span>
+            <span class="text-gray-300 font-normal">Club</span>
+          </div>
+        </a>
+
+        <!-- Nav Right -->
+        <ul class="flex gap-x-4">
+          <li><a href="/" class="text-white hover:text-yellow-400">Home</a></li>
+          <li><a href="/revalidation" class="text-white hover:text-yellow-400">Online Casino</a></li>
+          <li><a href="/image-cdn" class="text-white hover:text-yellow-400">Promotion</a></li>
+          <li><a href="/edge" class="text-white hover:text-yellow-400">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- 🟨 Welcome & Button -->
+      <div class="px-6 pt-6 sm:px-12 text-white">
+        <h3 class="text-xl mb-2">Welcome!</h3>
+        <h1 class="text-4xl font-bold text-yellow-400 mb-4">WPC CASINO</h1>
+        <a href="/Casino">
+          <img src="/images/playnow-bg.png" alt="Play Now" class="w-[148px] h-[56px]" />
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- 🆕 Second Image Section (1440x600 for example) -->
+  <!-- 🆕 SECTION 2: Second Background Image -->
   <section class="w-full bg-black">
     <div
       class="bg-no-repeat bg-top bg-center"
       style="background-image: url('/images/second-bg.jpg'); background-size: 1440px auto; height: 600px;"
     >
-      <!-- Optional content over the second background -->
+      <!-- Optional content on second BG -->
       <div class="px-6 pt-12 sm:px-12 text-white">
         <h2 class="text-3xl font-bold mb-4">Explore Our Games</h2>
         <p class="text-lg">Real experience, real rewards.</p>
@@ -25,8 +61,7 @@
     </div>
   </section>
 
-  <!-- 🔻 Continue your content -->
+  <!-- 🌐 Additional page content -->
   <ContextAlert class="mt-12" />
   <Markdown content={explainer} class="mb-10 text-lg text-left" />
-
 </Layout>
