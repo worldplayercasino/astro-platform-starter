@@ -40,13 +40,18 @@ const { title } = Astro.props;
   </div>
 
   <!-- ✅ Second BG image auto-sized to screen width -->
- <div
-    class="w-full bg-no-repeat bg-top bg-cover bg-center"
-    style="background-image: url('/images/second-bg.png'); aspect-ratio: 1440/800;"
-
-  >
-    
+<div
+  class="w-full bg-no-repeat bg-top bg-cover bg-center"
+  style="
+    background-image: url('/images/second-bg.png');
+    aspect-ratio: 1440 / 800;
+  "
+>
+  <!-- Optional: Content inside this section -->
+  <div class="w-full px-6 py-12 max-w-6xl mx-auto">
+    <!-- You can place content here if needed -->
   </div>
+</div>
 
 </body>
 
