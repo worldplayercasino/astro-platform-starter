@@ -25,7 +25,7 @@ const currentPath = Astro.url.pathname;
   <!-- Navigation Links -->
   {
     !!navItems?.length && (
-     <ul class="flex flex-wrap gap-x-6 ml-auto text-sm sm:text-base font-medium">
+   <ul class="flex flex-wrap gap-x-6 ml-auto text-sm sm:text-base font-medium">
   {navItems.map((item) => {
     const isActive = currentPath === item.href;
 
@@ -40,7 +40,7 @@ const currentPath = Astro.url.pathname;
         >
           {item.linkText}
 
-          {item.linkText === 'Home' && (
+          {isActive && (
             <svg class="w-3 h-3 text-white mt-[2px]" fill="none" stroke="currentColor" stroke-width="2"
               viewBox="0 0 24 24">
               <path d="M19 9l-7 7-7-7" />
