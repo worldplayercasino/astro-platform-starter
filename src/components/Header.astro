@@ -61,9 +61,11 @@ const currentPath = normalize(Astro.url.pathname);
   </button>
 
   <!-- Sign Up Button -->
-  <a href="/signup" class="w-[100px] h-9 bg-[#FFD700] rounded-md flex items-center justify-center hover:bg-[#e6c200] transition">
-    <img src="/images/signup.png" alt="Sign Up" class="h-5 object-contain" />
-  </a>
+  <!-- Sign Up Button (Image only, no background) -->
+<a href="/signup" class="ml-2 flex items-center justify-center">
+  <img src="/images/signup.png" alt="Sign Up" class="h-6 object-contain" />
+</a>
+
 </div>
 
 </nav>
