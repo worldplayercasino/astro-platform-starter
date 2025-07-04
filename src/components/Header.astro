@@ -53,9 +53,17 @@ const currentPath = normalize(Astro.url.pathname);
       );
     })}
   </ul>
- <!-- Search Button with Image -->
-<button class="ml-4 w-9 h-9 bg-[#141417] flex items-center justify-center rounded-md hover:bg-[#1e1e22] transition">
-  <img src="/images/searcch.png" alt="Search" class="w-4 h-4 object-contain" />
-</button>
+ <!-- Buttons: Search + Signup -->
+<div class="flex items-center gap-3 ml-4">
+  <!-- Search Button -->
+  <button class="w-9 h-9 bg-[#141417] flex items-center justify-center rounded-md hover:bg-[#1e1e22] transition">
+    <img src="/images/searcch.png" alt="Search" class="w-4 h-4 object-contain" />
+  </button>
+
+  <!-- Sign Up Button -->
+  <a href="/signup" class="w-[100px] h-9 bg-[#FFD700] rounded-md flex items-center justify-center hover:bg-[#e6c200] transition">
+    <img src="/images/signup.png" alt="Sign Up" class="h-5 object-contain" />
+  </a>
+</div>
 
 </nav>
