@@ -8,7 +8,7 @@ const navItems = [
   { linkText: 'About Us', href: '/edge' },
 ];
 
-const normalize = (path) => path.replace(/\/+$/, '').toLowerCase() || '/';
+const normalize = (path) => path.replace(/\/+$/, '') || '/';
 const currentPath = normalize(Astro.url.pathname);
 ---
 
@@ -23,37 +23,34 @@ const currentPath = normalize(Astro.url.pathname);
   </a>
 
   <!-- Navigation Links -->
-  {
-    !!navItems?.length && (
-      <ul class="flex flex-wrap gap-x-6 ml-auto text-sm sm:text-base font-medium">
-        {navItems.map((item) => {
-          const isActive = currentPath === normalize(item.href);
+  <ul class="flex flex-wrap gap-x-6 ml-auto text-sm sm:text-base font-medium">
+    {navItems.map((item) => {
+      const isActive = normalize(item.href) === currentPath;
 
-          return (
-            <li class="relative">
-              <a
-                href={item.href}
-                class={`flex items-center gap-1.5 px-1.5 py-1 sm:px-3 sm:py-2 
-                  ${isActive ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'} 
-                  no-underline`}
-                style="text-decoration: none;"
-              >
-                {item.linkText}
-                {isActive && (
-                  <svg class="w-3 h-3 text-white mt-[2px]" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24">
-                    <path d="M19 9l-7 7-7-7" />
-                  </svg>
-                )}
-              </a>
+      return (
+        <li class="relative">
+          <a
+            href={item.href}
+            class={`flex items-center gap-1.5 px-1.5 py-1 sm:px-3 sm:py-2 
+              ${isActive ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'} 
+              no-underline`}
+            style="text-decoration: none;"
+          >
+            {item.linkText}
 
-              {isActive && (
-                <span class="absolute left-0 -bottom-1 w-full h-[2px] bg-yellow-500 rounded"></span>
-              )}
-            </li>
-          );
-        })}
-      </ul>
-    )
-  }
+            {isActive && (
+              <svg class="w-3 h-3 text-white mt-[2px]" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            )}
+          </a>
+
+          {isActive && (
+            <span class="absolute left-0 -bottom-1 w-full h-[2px] bg-yellow-500 rounded"></span>
+          )}
+        </li>
+      );
+    })}
+  </ul>
 </nav>
