@@ -45,55 +45,55 @@ const explainer = `The Royal Casino will bring you the real experience.`;
 </section>
 
 <section class="w-full py-12 px-4 sm:px-12 relative">
-  <!-- Arrow Buttons -->
-  <button 
-    class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black bg-opacity-60 text-white rounded-md w-8 h-8 flex items-center justify-center hover:bg-opacity-80 transition"
-    onclick="document.getElementById('scrollGallery').scrollBy({ left: -300, behavior: 'smooth' })"
-  >
-    &#8592;
-  </button>
+  <!-- Scrollable Container -->
+  <div class="flex justify-center">
+    <div id="scrollGallery" class="flex gap-4 overflow-x-auto scroll-smooth w-full max-w-6xl mx-auto scrollbar-hide">
+      <!-- Image 1 -->
+      <img
+        src="/images/slider3.jpg"
+        alt="Image 1"
+        class="h-[280px] max-w-[300px] rounded-md object-cover shadow-lg"
+      />
+      <!-- Image 2 -->
+      <img
+        src="/images/slider2.jpg"
+        alt="Image 2"
+        class="h-[280px] max-w-[300px] rounded-md object-cover shadow-lg"
+      />
+      <!-- Image 3 -->
+      <img
+        src="/images/slider1.jpg"
+        alt="Image 3"
+        class="h-[280px] max-w-[300px] rounded-md object-cover shadow-lg"
+      />
+      <!-- Image 4 -->
+      <img
+        src="/images/slider4.jpg"
+        alt="Image 4"
+        class="h-[280px] max-w-[300px] rounded-md object-cover shadow-lg"
+      />
+    </div>
+  </div>
 
-  <button 
-    class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black bg-opacity-60 text-white rounded-md w-8 h-8 flex items-center justify-center hover:bg-opacity-80 transition"
-    onclick="document.getElementById('scrollGallery').scrollBy({ left: 300, behavior: 'smooth' })"
-  >
-    &#8594;
-  </button>
-
-  <!-- Scrollable Content -->
-  <div id="scrollGallery" class="flex gap-4 overflow-x-auto scroll-smooth w-full scrollbar-hide">
-    <!-- Image 1 -->
-    <img
-      src="/images/slider3.jpg"
-      alt="Image 1"
-      class="h-[280px] max-w-[400px] rounded-md object-cover shadow-lg"
-    />
-
-    <!-- Image 2 -->
-    <img
-      src="/images/slider2.jpg"
-      alt="Image 2"
-      class="h-[280px] max-w-[300px] rounded-md object-cover shadow-lg"
-    />
-
-    <!-- Image 3 -->
-    <img
-      src="/images/slider1.jpg"
-      alt="Image 3"
-      class="h-[280px] max-w-[300px] rounded-md object-cover shadow-lg"
-    />
-
-    <!-- Video -->
-    <video
-      src="/videos/promo.mp4"
-      class="h-[280px] max-w-[300px] rounded-md shadow-lg object-cover"
-      autoplay
-      muted
-      loop
-      playsinline
-    ></video>
+  <!-- Arrow Buttons at Bottom-Right -->
+  <div class="absolute right-4 bottom-4 flex gap-2">
+    <!-- Left -->
+    <button
+      onclick="document.getElementById('scrollGallery').scrollBy({ left: -300, behavior: 'smooth' })"
+      class="w-8 h-8 bg-[#222] text-white rounded shadow hover:bg-[#333] transition"
+    >
+      &#8592;
+    </button>
+    <!-- Right -->
+    <button
+      onclick="document.getElementById('scrollGallery').scrollBy({ left: 300, behavior: 'smooth' })"
+      class="w-8 h-8 bg-[#222] text-white rounded shadow hover:bg-[#333] transition"
+    >
+      &#8594;
+    </button>
   </div>
 </section>
+
 
 
 </section>
