@@ -70,29 +70,31 @@ const { title } = Astro.props;
     <!-- Social Icons + Phone -->
     <div class="flex items-center gap-3">
       <!-- Social Icon -->
-      <a href="#" class="w-8 h-8 bg-[#40404c] text-white flex items-center justify-center rounded-md hover:bg-[#555] transition">
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M10 15l5.19-3L10 9v6z"></path>
-        </svg>
-      </a>
-      <a href="#" class="w-8 h-8 bg-[#40404c] text-white flex items-center justify-center rounded-md hover:bg-[#555] transition">
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M8 19c7.5 0 11.6-6.2 11.6-11.6v-.5..." />
-        </svg>
-      </a>
-      <a href="#" class="w-8 h-8 bg-[#40404c] text-white flex items-center justify-center rounded-md hover:bg-[#555] transition">
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M15 2h-3a5 5 0 00-5 5v3H5v4h2v8h4v-8h3..." />
-        </svg>
-      </a>
+     <!-- YouTube -->
+<a href="#" class="w-8 h-8 bg-[#40404c] flex items-center justify-center rounded-md hover:bg-[#555] transition">
+  <img src="/icons/youtube.png" alt="YouTube" class="w-4 h-4" />
+</a>
+
+<!-- Twitter -->
+<a href="#" class="w-8 h-8 bg-[#40404c] flex items-center justify-center rounded-md hover:bg-[#555] transition">
+  <img src="/icons/twitter.png" alt="Twitter" class="w-4 h-4" />
+</a>
+
+<!-- Facebook -->
+<a href="#" class="w-8 h-8 bg-[#40404c] flex items-center justify-center rounded-md hover:bg-[#555] transition">
+  <img src="/icons/facebook.png" alt="Facebook" class="w-4 h-4" />
+</a>
+
 
       <!-- Phone Button -->
-      <a href="tel:02-508-8798" class="flex items-center bg-yellow-500 text-black font-semibold px-4 py-2 rounded-md hover:bg-yellow-400 transition ml-2">
-        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h1a2 2 0..." />
-        </svg>
-        02-508-8798
-      </a>
+      <a href="tel:02-508-8798"
+   class="flex items-center bg-yellow-500 text-black font-semibold px-4 py-2 rounded-md hover:bg-yellow-400 transition no-underline"
+   style="text-decoration: none;">
+  <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h1a2 2 0..." />
+  </svg>
+  02-508-8798
+</a>
     </div>
 
   </div>
