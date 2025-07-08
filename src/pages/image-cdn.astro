@@ -61,4 +61,64 @@ import Layout from '../layouts/Layout.astro';
 
 
 
+<section class="w-full  text-white py-12 px-4 sm:px-12">
+  <form class="max-w-6xl mx-auto space-y-8">
+    <!-- Grid inputs -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <label class="block text-sm mb-2">First Name</label>
+        <input type="text" placeholder="Enter First Name" class="w-full bg-[#1f1f27] text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none" />
+      </div>
+      <div>
+        <label class="block text-sm mb-2">Last Name</label>
+        <input type="text" placeholder="Enter Last Name" class="w-full bg-[#1f1f27] text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none" />
+      </div>
+      <div>
+        <label class="block text-sm mb-2">Email</label>
+        <input type="email" placeholder="Enter your Email" class="w-full bg-[#1f1f27] text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none" />
+      </div>
+      <div>
+        <label class="block text-sm mb-2">Phone</label>
+        <input type="text" placeholder="Enter Phone Number" class="w-full bg-[#1f1f27] text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none" />
+      </div>
+      <div>
+        <label class="block text-sm mb-2">Inquiry Type</label>
+        <select class="w-full bg-[#1f1f27] text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none">
+          <option>Select Inquiry Type</option>
+          <option>General</option>
+          <option>Partnership</option>
+          <option>Support</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm mb-2">How Did You Hear About Us?</label>
+        <select class="w-full bg-[#1f1f27] text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none">
+          <option>Select</option>
+          <option>Social Media</option>
+          <option>Referral</option>
+          <option>Advertisement</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Message -->
+    <div>
+      <label class="block text-sm mb-2">Message</label>
+      <textarea rows="5" placeholder="Enter your Message here.." class="w-full bg-[#1f1f27] text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none"></textarea>
+    </div>
+
+    <!-- Terms and Button -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <label class="flex items-center text-sm text-gray-300">
+        <input type="checkbox" class="mr-2" />
+        I agree with <a href="#" class="underline mx-1">Terms of Use</a> and <a href="#" class="underline">Privacy Policy</a>
+      </label>
+      <button type="submit" class="bg-yellow-500 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition">
+        Send your message
+      </button>
+    </div>
+  </form>
+</section>
+
+
 </Layout>
