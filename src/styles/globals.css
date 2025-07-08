@@ -2,7 +2,7 @@
 @import 'swiper/css';
 @import 'swiper/css/navigation';
 
-   <style>
+   
 @keyframes scroll-horizontal {
   0% {
     transform: translateX(100%);
@@ -14,7 +14,7 @@
 .scroll-loop {
   animation: scroll-horizontal 20s linear infinite;
 }
-</style>
+
 
     
 
