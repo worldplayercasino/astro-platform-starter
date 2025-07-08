@@ -77,4 +77,19 @@
         --btn-px: 1.5rem;
         --btn-py: 1.125rem;
     }
+    <style>
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.scroll-loop {
+  animation: scroll-horizontal 20s linear infinite;
+}
+</style>
+
+    
 }
