@@ -3,16 +3,24 @@
 @import 'swiper/css/navigation';
 
    
-@keyframes scroll-horizontal {
+@keyframes scroll-horizontal-loop {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
-.scroll-loop {
-  animation: scroll-horizontal 20s linear infinite;
+
+.scroll-loop-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.scroll-loop-track {
+  display: inline-flex;
+  animation: scroll-horizontal-loop 30s linear infinite;
 }
 
 
