@@ -6,7 +6,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const { title } = Astro.props;
+const currentPath = Astro.url.pathname;
+const hideForthSection = currentPath === "/image-cdn"; // You can add more conditions
 ---
+
 
 <!doctype html>
 <html lang="en">
@@ -45,12 +48,14 @@ const { title } = Astro.props;
 >
   <!-- Optional content -->
 </section>
-<section
-  class="w-full bg-no-repeat bg-top bg-cover bg-center"
-  style="background-image: url('/images/forth.png'); height: 800px;"
->
-  <!-- Optional content -->
-</section>
+{!hideForthSection && (
+  <section
+    class="w-full bg-no-repeat bg-top bg-cover bg-center"
+    style="background-image: url('/images/forth.png'); height: 800px;"
+  >
+    <!-- Optional content -->
+  </section>
+)}
 
 <section
   class="w-full bg-no-repeat bg-top bg-cover bg-center px-4 sm:px-12 py-6"
