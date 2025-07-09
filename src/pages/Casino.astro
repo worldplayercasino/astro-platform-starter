@@ -3,14 +3,43 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Casino">
+
+  <!-- Game content wrapper -->
+  <div id="orientation-lock" class="relative w-full h-full">
+    
+    <!-- Orientation Blocker -->
+    <div id="portrait-blocker" class="fixed inset-0 z-50 bg-black text-white flex flex-col items-center justify-center text-center px-6 hidden">
+      <h2 class="text-2xl font-bold mb-4">Please rotate your device</h2>
+      <p class="text-base text-gray-300">This game is best experienced in landscape mode.</p>
+    </div>
+
+    <!-- Game iframe -->
     <h1 class="text-center text-4xl font-bold my-10">Welcome to the Casino</h1>
     <div class="flex justify-center">
-        <iframe
-            src="/unity/index.html"
-            width="960"
-            height="600"
-            allow="fullscreen"
-            class="border border-gray-300 rounded-lg"
-        ></iframe>
+      <iframe
+        src="/unity/index.html"
+        width="960"
+        height="600"
+        allow="fullscreen"
+        class="border border-gray-300 rounded-lg"
+      ></iframe>
     </div>
+  </div>
+
+  <!-- Orientation detection script -->
+  <script is:inline>
+    function handleOrientation() {
+      const blocker = document.getElementById('portrait-blocker');
+      if (window.innerHeight > window.innerWidth && window.innerWidth < 768) {
+        blocker.classList.remove('hidden');
+      } else {
+        blocker.classList.add('hidden');
+      }
+    }
+
+    window.addEventListener('load', handleOrientation);
+    window.addEventListener('resize', handleOrientation);
+    window.addEventListener('orientationchange', handleOrientation);
+  </script>
+
 </Layout>
