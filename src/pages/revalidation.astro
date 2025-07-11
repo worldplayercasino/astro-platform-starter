@@ -4,16 +4,41 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Featured Tweet from World Players Club">
-  <section class="min-h-screen flex flex-col items-center justify-center bg-black text-white py-10 px-4">
-<h2 style="text-align: center; color: white;">Featured Tweet</h2>
+  <section class="min-h-screen flex flex-col items-center justify-center text-white py-10 px-4">
 
-<blockquote class="twitter-tweet" data-theme="dark" style="margin: 0 auto;">
-  <p lang="en" dir="ltr">
+<!-- Twitter Embed Container -->
+<div style="display: flex; flex-direction: column; align-items: center; gap: 2rem; padding: 2rem 1rem; background: transparent;">
+
+  <!-- Tweet 1 -->
+  <blockquote class="twitter-tweet" data-theme="dark">
     <a href="https://x.com/i/status/1927278169897275825"></a>
-  </p>
-</blockquote>
+  </blockquote>
 
+  <!-- Tweet 2 -->
+  <blockquote class="twitter-tweet" data-theme="dark">
+    <a href="https://x.com/i/status/1942619812531749321"></a>
+  </blockquote>
+
+  <!-- Tweet 3 -->
+  <blockquote class="twitter-tweet" data-theme="dark">
+    <a href="https://x.com/i/status/1941869126751867289"></a>
+  </blockquote>
+
+  <!-- Tweet 4 -->
+  <blockquote class="twitter-tweet" data-theme="dark">
+    <a href="https://x.com/i/status/1935293281572630905"></a>
+  </blockquote>
+
+  <!-- Tweet 5 -->
+  <blockquote class="twitter-tweet" data-theme="dark">
+    <a href="https://x.com/i/status/1939624976711114891"></a>
+  </blockquote>
+
+</div>
+
+<!-- Twitter Embed Script (only once!) -->
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
   </section>
 </Layout>
