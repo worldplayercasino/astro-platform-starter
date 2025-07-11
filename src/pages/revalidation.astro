@@ -4,30 +4,16 @@ import Layout from '../layouts/Layout.astro'; // ✅ Adjust path if needed
 
 
 <Layout title="Twitter Feed">
-  <section class="min-h-screen bg-black flex flex-col items-center justify-start py-12 px-4 text-white">
-    
-    <!-- Twitter Banner Section -->
-    <div class="text-center mb-6">
-      <img src="/images/twitter-header.jpg" alt="Header" class="w-full max-w-4xl h-40 object-cover rounded-lg" />
-      <div class="mt-[-40px]">
-        <img src="/logo.png" class="w-24 h-24 rounded-full border-4 border-black mx-auto" />
-        <h2 class="text-2xl font-bold mt-2">World Players Club <span class="text-blue-400">✔️</span></h2>
-        <p class="text-sm text-gray-400">@WldPlayersClub</p>
-      </div>
-    </div>
+  <h1 class="text-3xl font-bold text-center my-8">Follow Us on Twitter</h1>
 
-    <!-- Embedded Tweet Timeline -->
-    <a 
-      class="twitter-timeline" 
-      data-theme="dark" 
-      data-height="700" 
-      data-chrome="noheader nofooter noborders"
-      href="https://twitter.com/WldPlayersClub"
-    >
-      Tweets by @WldPlayersClub
-    </a>
-    
-    <!-- Load Twitter widget script -->
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </section>
+  <div class="flex justify-center">
+    <a class="twitter-timeline" 
+       data-theme="dark" 
+       data-height="600" 
+       href="https://x.com/WldPlayersClub">
+       Tweets by @WldPlayersClub
+    </a> 
+  </div>
+
+  <script is:inline async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </Layout>
