@@ -2,41 +2,37 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Featured Tweet from World Players Club">
-  <section class="min-h-screen flex flex-col items-center justify-center text-white py-10 px-4">
+<Layout title="World Players Club - Video Showcase">
+  <section class="min-h-screen flex flex-col items-center justify-center gap-8 py-12 bg-black text-white">
 
-    <!-- Twitter Embed Container -->
-    <div class="flex flex-col items-center gap-8 w-full max-w-2xl">
+    <h1 class="text-3xl font-bold text-center">Featured Videos</h1>
 
-      <!-- Tweet 1 -->
-      <blockquote class="twitter-tweet" data-theme="dark">
-        <a href="https://x.com/i/status/1927278169897275825"></a>
-      </blockquote>
+    <div class="flex flex-col gap-10 w-full max-w-3xl px-4">
+      <!-- Video 1 -->
+      <video controls class="w-full rounded-lg shadow-lg">
+        <source src="/videos/p1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-      <!-- Tweet 2 -->
-      <blockquote class="twitter-tweet" data-theme="dark">
-        <a href="https://x.com/i/status/1942619812531749321"></a>
-      </blockquote>
+      <!-- Video 2 -->
+      <video controls class="w-full rounded-lg shadow-lg">
+        <source src="/videos/p2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-      <!-- Tweet 3 -->
-      <blockquote class="twitter-tweet" data-theme="dark">
-        <a href="https://x.com/i/status/1941869126751867289"></a>
-      </blockquote>
+      <!-- Video 3 -->
+      <video controls class="w-full rounded-lg shadow-lg">
+        <source src="/videos/p3.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-      <!-- Tweet 4 -->
-      <blockquote class="twitter-tweet" data-theme="dark">
-        <a href="https://x.com/i/status/1935293281572630905"></a>
-      </blockquote>
-
-      <!-- Tweet 5 -->
-      <blockquote class="twitter-tweet" data-theme="dark">
-        <a href="https://x.com/i/status/1939624976711114891"></a>
-      </blockquote>
-
+      <!-- Video 4 -->
+      <video controls class="w-full rounded-lg shadow-lg">
+        <source src="/videos/p4.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      
     </div>
-
-    <!-- Load Twitter script -->
-    <script is:inline async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   </section>
 </Layout>
