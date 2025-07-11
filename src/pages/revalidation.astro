@@ -1,22 +1,28 @@
----
-import Layout from '../layouts/Layout.astro';
----
+<Layout title="Twitter Feed">
+  <section class="min-h-screen bg-black flex flex-col items-center justify-start py-12 px-4 text-white">
+    
+    <!-- Twitter Banner Section -->
+    <div class="text-center mb-6">
+      <img src="/images/twitter-header.jpg" alt="Header" class="w-full max-w-4xl h-40 object-cover rounded-lg" />
+      <div class="mt-[-40px]">
+        <img src="/logo.png" class="w-24 h-24 rounded-full border-4 border-black mx-auto" />
+        <h2 class="text-2xl font-bold mt-2">World Players Club <span class="text-blue-400">✔️</span></h2>
+        <p class="text-sm text-gray-400">@WldPlayersClub</p>
+      </div>
+    </div>
 
-<Layout title="Twitter Profile">
-  <div class="max-w-4xl mx-auto text-center my-8">
-    <h1 class="text-3xl font-bold mb-2">World Players Club</h1>
-    <p class="text-sm text-gray-400">@WldPlayersClub</p>
-  </div>
-
-  <!-- Twitter timeline embed -->
-  <div class="flex justify-center">
-    <a class="twitter-timeline"
-       data-height="800"
-       data-theme="dark"
-       href="https://twitter.com/WldPlayersClub?ref_src=twsrc%5Etfw">
+    <!-- Embedded Tweet Timeline -->
+    <a 
+      class="twitter-timeline" 
+      data-theme="dark" 
+      data-height="700" 
+      data-chrome="noheader nofooter noborders"
+      href="https://twitter.com/WldPlayersClub"
+    >
       Tweets by @WldPlayersClub
     </a>
-  </div>
-
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
+    <!-- Load Twitter widget script -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </section>
 </Layout>
