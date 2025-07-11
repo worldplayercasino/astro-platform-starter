@@ -5,20 +5,16 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Featured Tweet from World Players Club">
   <section class="min-h-screen flex flex-col items-center justify-center bg-black text-white py-10 px-4">
-    <h1 class="text-3xl font-bold mb-6 text-center">Featured Tweet</h1>
+<h2 style="text-align: center; color: white;">Featured Tweet</h2>
 
-    <!-- Embed single tweet -->
-    <blockquote class="twitter-tweet" data-theme="dark" data-width="550">
-      <p lang="en" dir="ltr">
-        Are you ready for this?<br><br>First impressions? Drop your comments!
-        <a href="https://twitter.com/WldPlayersClub/status/1795021164013539632">May 27, 2024</a>
-      </p>
-      &mdash; World Players Club (@WldPlayersClub)
-      <a href="https://x.com/i/status/1927278169897275825?ref_src=twsrc%5Etfw">May 27, 2024</a>
-    </blockquote>
+<blockquote class="twitter-tweet" data-theme="dark" style="margin: 0 auto;">
+  <p lang="en" dir="ltr">
+    <a href="https://x.com/i/status/1927278169897275825"></a>
+  </p>
+</blockquote>
 
-    <!-- Required Twitter JS -->
-    <script is:inline async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
   </section>
 </Layout>
 
