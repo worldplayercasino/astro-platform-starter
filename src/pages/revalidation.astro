@@ -3,23 +3,17 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="World Players Club - Twitter Feed">
+<Layout title="Twitter Feed">
+  <h1 class="text-3xl font-bold text-center my-8">Follow Us on Twitter</h1>
 
-  <section class="min-h-screen flex flex-col items-center justify-center bg-black text-white py-10">
-    <h1 class="text-3xl font-bold mb-4">Follow Us on Twitter</h1>
+  <div class="flex justify-center">
+    <a class="twitter-timeline" 
+       data-theme="dark" 
+       data-height="600" 
+       href="https://twitter.com/WldPlayersClub?ref_src=twsrc%5Etfw">
+       Tweets by @WldPlayersClub
+    </a> 
+  </div>
 
-    <!-- Twitter Timeline Embed -->
-    <a
-      class="twitter-timeline"
-      data-theme="dark"
-      data-height="700"
-      href="https://twitter.com/WldPlayersClub"
-    >
-      Tweets by @WldPlayersClub
-    </a>
-
-    <!-- Required Twitter Script -->
-    <script is:inline async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </section>
-
+  <script is:inline src="https://platform.twitter.com/widgets.js" async charset="utf-8"></script>
 </Layout>
