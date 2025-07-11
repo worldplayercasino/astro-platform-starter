@@ -2,14 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Twitter Feed">
-  <h1 class="text-center text-3xl font-bold my-10">Follow Us on Twitter</h1>
+<Layout title="Twitter Profile">
+  <div class="max-w-4xl mx-auto text-center my-8">
+    <h1 class="text-3xl font-bold mb-2">World Players Club</h1>
+    <p class="text-sm text-gray-400">@WldPlayersClub</p>
+  </div>
 
+  <!-- Twitter timeline embed -->
   <div class="flex justify-center">
     <a class="twitter-timeline"
+       data-height="800"
        data-theme="dark"
-       data-height="600"
-       href="https://twitter.com/WldPlayersClub">
+       href="https://twitter.com/WldPlayersClub?ref_src=twsrc%5Etfw">
       Tweets by @WldPlayersClub
     </a>
   </div>
