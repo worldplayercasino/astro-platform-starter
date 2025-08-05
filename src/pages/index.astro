@@ -240,50 +240,51 @@ Play now and win  </h5>
   </button>
 </section>
 
-<!-- ✅ Continuous Slider Section -->
-<section class="w-full bg-black py-10 overflow-hidden">
-  <div class="whitespace-nowrap animate-slide flex gap-8">
-    <!-- Slider Images -->
-    <img src="/sliderImages/cow boy.png" alt="Cow Boy" class="h-60 inline-block" />
-    <img src="/sliderImages/egypt.png" alt="Egypt" class="h-60 inline-block" />
-    <img src="/sliderImages/fruits.png" alt="Fruits" class="h-60 inline-block" />
-    <img src="/sliderImages/greek.png" alt="Greek" class="h-60 inline-block" />
-    <img src="/sliderImages/jungle.png" alt="Jungle" class="h-60 inline-block" />
-    <img src="/sliderImages/magical_.png" alt="Magical" class="h-60 inline-block" />
-    <img src="/sliderImages/medusa.png" alt="Medusa" class="h-60 inline-block" />
-    <img src="/sliderImages/nordic.png" alt="Nordic" class="h-60 inline-block" />
-    <img src="/sliderImages/oceans.png" alt="Oceans" class="h-60 inline-block" />
-    <img src="/sliderImages/space_.png" alt="Space" class="h-60 inline-block" />
+<!-- ✅ Seamless Looping Slider -->
+<section class="w-full overflow-hidden py-8">
+  <div class="slider-track flex gap-6">
+    <!-- Original Set -->
+    <img src="/sliderImages/cow boy.png" alt="Cow Boy" class="h-40" />
+    <img src="/sliderImages/egypt.png" alt="Egypt" class="h-40" />
+    <img src="/sliderImages/fruits.png" alt="Fruits" class="h-40" />
+    <img src="/sliderImages/greek.png" alt="Greek" class="h-40" />
+    <img src="/sliderImages/jungle.png" alt="Jungle" class="h-40" />
+    <img src="/sliderImages/magical_.png" alt="Magical" class="h-40" />
+    <img src="/sliderImages/medusa.png" alt="Medusa" class="h-40" />
+    <img src="/sliderImages/nordic.png" alt="Nordic" class="h-40" />
+    <img src="/sliderImages/oceans.png" alt="Oceans" class="h-40" />
+    <img src="/sliderImages/space_.png" alt="Space" class="h-40" />
 
-    <!-- Duplicate for seamless loop -->
-    <img src="/sliderImages/cow boy.png" alt="Cow Boy" class="h-60 inline-block" />
-    <img src="/sliderImages/egypt.png" alt="Egypt" class="h-60 inline-block" />
-    <img src="/sliderImages/fruits.png" alt="Fruits" class="h-60 inline-block" />
-    <img src="/sliderImages/greek.png" alt="Greek" class="h-60 inline-block" />
-    <img src="/sliderImages/jungle.png" alt="Jungle" class="h-60 inline-block" />
-    <img src="/sliderImages/magical_.png" alt="Magical" class="h-60 inline-block" />
-    <img src="/sliderImages/medusa.png" alt="Medusa" class="h-60 inline-block" />
-    <img src="/sliderImages/nordic.png" alt="Nordic" class="h-60 inline-block" />
-    <img src="/sliderImages/oceans.png" alt="Oceans" class="h-60 inline-block" />
-    <img src="/sliderImages/space_.png" alt="Space" class="h-60 inline-block" />
+    <!-- Duplicate Set (for seamless looping) -->
+    <img src="/sliderImages/cow boy.png" alt="Cow Boy" class="h-40" />
+    <img src="/sliderImages/egypt.png" alt="Egypt" class="h-40" />
+    <img src="/sliderImages/fruits.png" alt="Fruits" class="h-40" />
+    <img src="/sliderImages/greek.png" alt="Greek" class="h-40" />
+    <img src="/sliderImages/jungle.png" alt="Jungle" class="h-40" />
+    <img src="/sliderImages/magical_.png" alt="Magical" class="h-40" />
+    <img src="/sliderImages/medusa.png" alt="Medusa" class="h-40" />
+    <img src="/sliderImages/nordic.png" alt="Nordic" class="h-40" />
+    <img src="/sliderImages/oceans.png" alt="Oceans" class="h-40" />
+    <img src="/sliderImages/space_.png" alt="Space" class="h-40" />
   </div>
 </section>
 
-<!-- ✅ Custom CSS -->
 <style>
-  @keyframes slide {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+  .slider-track {
+    animation: scrollSlider 40s linear infinite;
+    will-change: transform;
   }
 
-  .animate-slide {
-    animation: slide 30s linear infinite;
+  @keyframes scrollSlider {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
   }
 </style>
+
 
 
 </Layout>
