@@ -60,7 +60,7 @@ const explainer = `The Royal Casino will bring you the real experience.`;
 <section class="w-full py-12 px-4 sm:px-12 relative">
   <!-- Scrollable Container -->
   <div class="flex justify-center">
-    <div id="scrollGallery" class="flex gap-4 overflow-x-auto scroll-smooth w-full max-w-6xl mx-auto scrollbar-hide">
+    <div id="scrollGallery" class="flex gap-4 overflow-x-auto scroll-smooth w-[1260px] scrollbar-hide">
       <!-- Image 1 -->
       <img
         src="/images/slider3.jpg"
@@ -79,28 +79,27 @@ const explainer = `The Royal Casino will bring you the real experience.`;
         alt="Image 3"
         class="h-[280px] max-w-[300px] rounded-md object-cover shadow-lg"
       />
-      <!-- Video -->
-    <video
-      src="/videos/promo.mp4"
-      class="h-[280px] max-w-[300px] rounded-md shadow-lg object-cover"
-      autoplay
-      muted
-      loop
-      playsinline
-    ></video>
+      <!-- Video 4 -->
+      <video
+        src="/videos/promo.mp4"
+        class="h-[280px] max-w-[300px] rounded-md shadow-lg object-cover"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+      <!-- Add more images/videos as needed -->
     </div>
   </div>
 
-  <!-- Arrow Buttons at Bottom-Right -->
+  <!-- Arrow Buttons -->
   <div class="absolute right-4 bottom-4 flex gap-2">
-    <!-- Left -->
     <button
       onclick="document.getElementById('scrollGallery').scrollBy({ left: -300, behavior: 'smooth' })"
       class="w-8 h-8 bg-[#222] text-white rounded shadow hover:bg-[#333] transition"
     >
       &#8592;
     </button>
-    <!-- Right -->
     <button
       onclick="document.getElementById('scrollGallery').scrollBy({ left: 300, behavior: 'smooth' })"
       class="w-8 h-8 bg-[#222] text-white rounded shadow hover:bg-[#333] transition"
@@ -109,6 +108,7 @@ const explainer = `The Royal Casino will bring you the real experience.`;
     </button>
   </div>
 </section>
+
 
 
 <section class="w-full text-white  pt-6 pb-4">
