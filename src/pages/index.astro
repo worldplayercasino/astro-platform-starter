@@ -118,7 +118,9 @@ const explainer = `The Royal Casino will bring you the real experience.`;
         id="winImage" 
         src="/1.-BIG-Win (1).png" 
         alt="Win Image"
-        class="w-full max-w-[900px] h-auto object-contain transition-opacity duration-500"
+        width="1440"
+        height="960"
+        class="object-contain transition-opacity duration-500"
       />
     </div>
   </div>
@@ -137,7 +139,7 @@ const explainer = `The Royal Casino will bring you the real experience.`;
   setInterval(() => {
     current = (current + 1) % images.length;
     imageElement.src = images[current];
-  }, 3000);
+  }, 3000); // every 3 seconds
 </script>
 
 
