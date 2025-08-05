@@ -111,11 +111,15 @@ const explainer = `The Royal Casino will bring you the real experience.`;
 </section>
 
 
-<section class="w-full  text-white py-12">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-    <div class="relative w-[1440px] h-[960px] mx-auto">
-      <img id="winImage" src="/1.-BIG-Win (1).png" alt="Win Image"
-           class="absolute inset-0 w-full h-full object-contain transition-opacity duration-500" />
+<section class="w-full text-white py-12">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6">
+    <div class="flex justify-center items-center">
+      <img 
+        id="winImage" 
+        src="/1.-BIG-Win (1).png" 
+        alt="Win Image"
+        class="w-full max-w-[900px] h-auto object-contain transition-opacity duration-500"
+      />
     </div>
   </div>
 </section>
@@ -133,8 +137,9 @@ const explainer = `The Royal Casino will bring you the real experience.`;
   setInterval(() => {
     current = (current + 1) % images.length;
     imageElement.src = images[current];
-  }, 3000); // change every 3 seconds
+  }, 3000);
 </script>
+
 
 
 
